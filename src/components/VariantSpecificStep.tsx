@@ -51,6 +51,7 @@ export function VariantSpecificStep({ variant, onContinue, isFinalVariant }: Ste
 
         window.alert(`TUGAS ${taskData.length + 1}:\n"${taskStrings[taskData.length]}"\n\nBila Anda telah memahami maksud tugas ini, silakan tekan OK.\n\nHarap ingat untuk menekan tombol "TUGAS SELESAI" di atas layar ketika Anda telah mencapai tujuan tugas ini.`);
         taskStartTime.current = Date.now();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [taskData, isEmbedReady]);
 
     const onTaskGiveUp = () => {
@@ -105,6 +106,7 @@ export function VariantSpecificStep({ variant, onContinue, isFinalVariant }: Ste
                     allowFullScreen
                     className='block w-full'
                     ref={iframeRef}
+                    title='Figma prototype frame'
                 />
             </div>
         </>
