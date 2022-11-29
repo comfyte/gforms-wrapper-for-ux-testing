@@ -1,0 +1,3 @@
+interface StepProps {
+    onContinue: () => any;
+}

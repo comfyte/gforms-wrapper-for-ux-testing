@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input[type=text], input[type=number] {
+        @apply rounded-md;
+    }
+
+    *, :before, :after {
+        outline: 1px solid rgb(255 0 0 / 0.5);
+    }
+}
+
+@layer components {
+    .button {
+        @apply
+            block
+            px-3
+            py-1.5
+            rounded
+            bg-blue-500
+            text-white
+            hover:brightness-105
+            active:brightness-95
+            font-semibold
+        ;
+    }
+}
